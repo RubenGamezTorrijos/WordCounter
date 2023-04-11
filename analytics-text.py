@@ -1,6 +1,7 @@
-# Autor: Rubén Gámez Torrijos
-#
-# 
+###########################################
+# Autor: Rubén Gámez Torrijos             #
+# Analizador de texto, palabras, y letras #
+###########################################
 
 
 import string
