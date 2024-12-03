@@ -26,3 +26,5 @@ No es necesario instalar ninguna dependencia externa. Solo necesitas tener Pytho
 
    ```bash
    python analizador_texto.py
+---
+![image](https://github.com/user-attachments/assets/f30d0a97-4fd4-4ee6-9950-74d471d047db)
