@@ -1,6 +1,6 @@
 ###########################################
 # Autor: Rubén Gámez Torrijos             #
-# Analizador de texto interactivo         #
+# Analizador de palabras estadístico      #
 ###########################################
 
 import string
