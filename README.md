@@ -1,4 +1,4 @@
-# Analizador de Texto, Palabras y Letras
+# Analizador de Palabras más buscadas
 
 Este es un programa en Python diseñado para analizar un texto ingresado por el usuario. El programa realiza un análisis detallado de la cantidad de palabras y caracteres en el texto, así como la frecuencia de aparición de cada letra y cada palabra.
 
