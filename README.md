@@ -27,7 +27,7 @@ No es necesario instalar ninguna dependencia externa. Solo necesitas tener Pytho
    ```bash
    python analytics_words.py
 ---
-![image](https://github.com/user-attachments/assets/6afbf491-c1d7-4324-95d8-0f5574061292)
+![image](https://github.com/user-attachments/assets/d158f583-1b22-4db5-8fb5-1325b61c860c)
 
 
 ## Mejoras
