@@ -10,7 +10,7 @@ from collections import Counter
 from rich.console import Console
 from rich.table import Table
 
-# Archivo JSON para almacenar palabras ingresadas
+# Archivo JSON para almacenar palabras introducidas
 archivo_json = "palabras.json"
 
 # Inicializar consola de Rich
@@ -37,6 +37,11 @@ while True:
     # Ignorar entradas vacías
     if not entrada:
         console.print("[bold yellow]Por favor, ingresa una palabra válida.[/bold yellow]")
+        continue
+
+    # Validar si se ingresaron múltiples palabras
+    if len(entrada.split()) > 1:
+        console.print("[bold red]Error: Por favor, introduce sólo una palabra.[/bold red]")
         continue
 
     # Eliminar signos de puntuación
