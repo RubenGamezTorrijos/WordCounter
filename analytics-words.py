@@ -7,9 +7,14 @@ import string
 import json
 import matplotlib.pyplot as plt
 from collections import Counter
+from rich.console import Console
+from rich.table import Table
 
 # Archivo JSON para almacenar palabras ingresadas
 archivo_json = "palabras.json"
+
+# Inicializar consola de Rich
+console = Console()
 
 # Cargar palabras desde el archivo JSON si existe
 try:
@@ -18,20 +23,20 @@ try:
 except FileNotFoundError:
     palabras_totales = []
 
-print("=== Analizador Interactivo de Palabras ===")
-print("Ingresa palabras una a una para analizar estadísticas.")
-print("Escribe 'salir' para terminar.")
+console.print("[bold green]===[ Analizador Interactivo de Palabras ]===[/bold green]")
+console.print("Introduce palabras una a una para analizar estadísticas.")
+console.print("Escribe '[bold red]salir[/bold red]' para terminar el programa.\n")
 
 while True:
-    entrada = input("Ingresa una palabra: ").strip().lower()
+    entrada = input("Introduce una palabra: ").strip().lower()
 
     if entrada == "salir":
-        print("Saliendo del programa...")
+        console.print("[bold red]Saliendo del programa...[/bold red]")
         break
 
     # Ignorar entradas vacías
     if not entrada:
-        print("Por favor, ingresa una palabra válida.")
+        console.print("[bold yellow]Por favor, ingresa una palabra válida.[/bold yellow]")
         continue
 
     # Eliminar signos de puntuación
@@ -48,12 +53,18 @@ while True:
     palabra_mas_frecuente = contador_palabras.most_common(1)[0]
 
     # Mostrar estadísticas
-    print(f"\nTotal de palabras ingresadas: {total_palabras}")
-    print(f"La palabra más frecuente es '{palabra_mas_frecuente[0]}' con {palabra_mas_frecuente[1]} apariciones.")
-    print("Distribución porcentual de palabras:")
+    console.print(f"\n[bold cyan]Total de palabras guardadas:[/bold cyan] {total_palabras}")
+    console.print(f"[bold cyan]La palabra más frecuente:[/bold cyan] '{palabra_mas_frecuente[0]}' con {palabra_mas_frecuente[1]} apariciones.")
+
+    # Crear una tabla bonita con Rich
+    table = Table(title="Distribución de Palabras", title_style="bold magenta")
+    table.add_column("Palabra", style="cyan", justify="center")
+    table.add_column("Cantidad", style="green", justify="center")
+
     for palabra, cantidad in contador_palabras.items():
-        porcentaje = (cantidad / total_palabras) * 100
-        print(f"- {palabra}: {cantidad} ({porcentaje:.2f}%)")
+        table.add_row(palabra, str(cantidad))
+
+    console.print(table)
 
     # Crear gráfico de pastel
     etiquetas = list(contador_palabras.keys())
