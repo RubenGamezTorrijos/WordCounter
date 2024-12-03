@@ -5,8 +5,6 @@ Este es un programa en Python diseñado para analizar un texto ingresado por el 
 ## Características
 
 - **Cantidad de palabras**: Cuenta el número total de palabras en el texto.
-- **Cantidad de caracteres**: Cuenta los caracteres en el texto, excluyendo los signos de puntuación.
-- **Frecuencia de letras**: Muestra la frecuencia con la que aparece cada letra en el texto (solo letras, sin contar espacios ni números).
 - **Frecuencia de palabras**: Muestra la frecuencia de aparición de cada palabra, sin distinguir entre mayúsculas y minúsculas.
 
 ## Requisitos
@@ -17,6 +15,8 @@ Este es un programa en Python diseñado para analizar un texto ingresado por el 
 
 No es necesario instalar ninguna dependencia externa. Solo necesitas tener Python instalado en tu sistema.
 
+
+
 ## Uso
 
 1. Clona o descarga este repositorio.
@@ -25,6 +25,11 @@ No es necesario instalar ninguna dependencia externa. Solo necesitas tener Pytho
 4. Ejecuta el script con el siguiente comando:
 
    ```bash
-   python analizador_texto.py
+   python analytics_words.py
 ---
 ![image](https://github.com/user-attachments/assets/92c7042b-0563-4c92-9e37-dcb8529a84a9)
+
+
+## Mejoras
+- **Cantidad de caracteres**: Cuenta los caracteres en el texto, excluyendo los signos de puntuación.
+- **Frecuencia de letras**: Muestra la frecuencia con la que aparece cada letra en el texto (solo letras, sin contar espacios ni números).
