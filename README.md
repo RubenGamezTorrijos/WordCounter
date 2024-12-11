@@ -1,11 +1,12 @@
-# Analizador de Palabras más buscadas
+# Contador de palabras: Referencias de animales.
 
-Este es un programa en Python diseñado para analizar un texto ingresado por el usuario. El programa realiza un análisis detallado de la cantidad de palabras y caracteres en el texto, así como la frecuencia de aparición de cada letra y cada palabra.
+Una herramienta simple y eficiente para analizar textos en busca de palabras clave relacionadas con animales. Este proyecto cuenta las veces que aparecen términos relacionados con animales en un texto dado y proporciona el número total de palabras analizadas. Ideal para análisis de texto en estudios de zoología, biología o cualquier proyecto que requiera identificar y cuantificar términos relacionados con animales en datos textuales.
 
 ## Características
 
 - **Cantidad de palabras**: Cuenta el número total de palabras en el texto.
-- **Frecuencia de palabras**: Muestra la frecuencia de aparición de cada palabra, sin distinguir entre mayúsculas y minúsculas.
+- **Frecuencia de palabras**: Muestra la frecuencia de aparición de cada palabra y el total, sin distinguir entre mayúsculas y minúsculas.
+- **Interfaz básica:** Introducción de texto y muestra una tabla con un gráfico visual de estadísticas.
 
 ## Requisitos
 
